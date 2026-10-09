@@ -1,0 +1,25 @@
+# Dados e saidas geradas ficam fora do Git
+data/
+resultados/
+
+# Estado local do R e dos editores
+.Rhistory
+.RData
+.RDataTmp
+.Rproj.user/
+.Renviron
+.env
+/.vscode/*
+!/.vscode/settings.json
+.idea/
+
+# Bibliotecas e ambientes locais
+.Rlib/
+renv/library/
+.venv/
+
+# Arquivos temporarios do Excel e do sistema operacional
+~$*
+Thumbs.db
+Desktop.ini
+.DS_Store
