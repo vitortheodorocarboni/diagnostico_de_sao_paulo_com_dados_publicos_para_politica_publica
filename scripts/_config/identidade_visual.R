@@ -171,6 +171,26 @@ notas_padrao <- c(
     "Asterisco (*) ou contorno tracejado: distrito com menos de ",
     minimo_registros_od, " registros de trabalhadores na OD; ler com cautela. ",
     "Sem valor (cinza): menos de ", piso_registros_od, " registros."
+  ),
+  amostra_menor_obitos = paste0(
+    "Asterisco (*) ou contorno tracejado: distrito com menos de ",
+    minimo_registros_obitos, " registros de falecidos na amostra; ler com cautela. ",
+    "Sem valor (cinza): menos de ", piso_registros_obitos, " registros."
+  ),
+  amostra_menor_unipessoais = paste0(
+    "Asterisco (*) ou contorno tracejado: distrito com menos de ",
+    minimo_registros_unipessoais, " registros de domicílios unipessoais na amostra; ler com cautela. ",
+    "Sem valor (cinza): menos de ", piso_registros_unipessoais, " registros."
+  ),
+  perfil_unipessoais = paste(
+    "Domicílio unipessoal: domicílio particular ocupado com um morador, que é a pessoa responsável;",
+    "o perfil é o de quem mora só (amostra, estimado a partir dos registros dos domicílios unipessoais)."
+  ),
+  captacao_obitos   = paste(
+    "Óbitos de moradores de janeiro de 2019 a julho de 2022 informados pelos",
+    "domicílios no Censo: domicílios desfeitos não informam e a captação cai com a",
+    "antiguidade do óbito, por isso os totais ficam abaixo dos registros civis e não",
+    "medem o excesso de mortes da pandemia."
   )
 )
 
@@ -185,6 +205,20 @@ aviso_amostra_menor <- paste0(
 aviso_amostra_menor_od <- paste0(
   "Amostra menor (menos de ", minimo_registros_od,
   " registros de trabalhadores na OD): ler com cautela"
+)
+
+# Definindo o aviso dos distritos com poucos registros de falecidos nos
+# gráficos por distrito
+aviso_amostra_menor_obitos <- paste0(
+  "Amostra menor (menos de ", minimo_registros_obitos,
+  " registros de falecidos): ler com cautela"
+)
+
+# Definindo o aviso dos distritos com poucos registros de domicílios unipessoais
+# nos gráficos por distrito
+aviso_amostra_menor_unipessoais <- paste0(
+  "Amostra menor (menos de ", minimo_registros_unipessoais,
+  " registros de domicílios unipessoais): ler com cautela"
 )
 
 # Definindo os tamanhos nomeados das figuras, em centímetros

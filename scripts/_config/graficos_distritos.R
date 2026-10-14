@@ -259,3 +259,67 @@ figura_distrito <- function(mapa_base, valores, codigo, valor_municipio, descric
     )
 }
 
+
+# Criando uma função para desenhar, para um distrito, as barras de categorias
+# ao lado das do município, com o valor ao fim e † nas categorias com poucos
+# registros (dados: nivel_territorial, nome_distrito, posicao, rotulo, pct e
+# n_registros; n_registros ausente não recebe †)
+desenhar_comparacao <- function(dados, nome_titulo, subtitulo, nota, aviso = NULL,
+                                fontes = "censo_amostra", limite = 100,
+                                minimo_registros = 30, tamanho_rotulo = 9) {
+
+  # Preparando as barras do distrito e do município em cada categoria
+  dados <- dados |>
+    mutate(
+      rotulo = factor(rotulo, levels = rev(unique(rotulo[order(posicao)]))),
+      barra  = factor(
+        if_else(nivel_territorial == "municipio", "Município de São Paulo", nome_titulo),
+        levels = c("Município de São Paulo", nome_titulo)
+      ),
+      texto  = paste0(
+        formatar_numero(pct, 1), "%",
+        if_else(!is.na(n_registros) & n_registros < minimo_registros, " †", "")
+      )
+    )
+
+  # Desenhando as barras lado a lado
+  ggplot(dados, aes(x = pct, y = rotulo, fill = barra)) +
+    geom_col(
+      position = position_dodge(width = 0.8),
+      width    = 0.75
+    ) +
+    geom_text(
+      mapping  = aes(label = texto),
+      position = position_dodge(width = 0.8),
+      hjust    = -0.15,
+      family   = familia_fonte,
+      size     = 2.8,
+      colour   = cor_texto
+    ) +
+    scale_fill_manual(
+      values = setNames(c(cor_neutra, paleta_insper[["vermelho"]]), c("Município de São Paulo", nome_titulo)),
+      breaks = c(nome_titulo, "Município de São Paulo"),
+      name   = NULL
+    ) +
+    scale_x_continuous(
+      labels = rotulo_numero(suffix = "%"),
+      limits = c(0, limite),
+      breaks = seq(0, limite, by = limite / 4),
+      expand = expansion(mult = c(0, 0))
+    ) +
+    labs(
+      title    = nome_titulo,
+      subtitle = paste0(subtitulo, if (!is.null(aviso)) paste0("\n", aviso) else ""),
+      x        = NULL,
+      y        = NULL,
+      caption  = legenda_fonte(
+        fontes = fontes,
+        notas  = c(nota, "se_republica", "incerteza_amostra", "acesso_controlado")
+      )
+    ) +
+    tema_insper() +
+    theme(
+      axis.text.y        = element_text(size = tamanho_rotulo, colour = cor_texto),
+      panel.grid.major.y = element_blank()
+    )
+}

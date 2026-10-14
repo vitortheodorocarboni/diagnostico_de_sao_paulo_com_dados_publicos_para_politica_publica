@@ -1,5 +1,5 @@
 # Dados e saidas geradas ficam fora do Git
-data/
+dados/
 resultados/
 
 # Estado local do R e dos editores

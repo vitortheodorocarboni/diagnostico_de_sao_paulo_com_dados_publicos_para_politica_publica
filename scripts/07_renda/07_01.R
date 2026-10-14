@@ -29,7 +29,7 @@ codigo_municipio_sp <- "3550308"
 
 # Definindo o caminho e o SHA-256 da amostra por área de ponderação
 arquivo_amostra <- "censo_2022/areas_de_ponderacao/tratados/tabulares/censo_amostra_areas_ponderacao.parquet"
-sha256_amostra  <- "0c707eb71624cff3ed8102d352550231106310a1d0b103aeafbca2254d2a40ac"
+sha256_amostra  <- "7bec0b2f873264908f1304fb3c6e2ee6e015b4df9231cc0f6eec419b7137bc6b"
 
 # Definindo os campos da amostra usados no grupo (significados no dicionário
 # das áreas de ponderação do Dados)

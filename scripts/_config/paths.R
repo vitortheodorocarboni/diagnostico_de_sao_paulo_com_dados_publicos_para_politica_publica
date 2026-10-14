@@ -107,8 +107,8 @@ caminho_dados_acervo <- function(...) {
 # Criando uma função para compor caminhos na pasta de dados do projeto
 caminho_data <- function(...) {
 
-  # Combinando a raiz do projeto com a pasta data
-  file.path(raiz_projeto, "data", ...)
+  # Combinando a raiz do projeto com a pasta dados
+  file.path(raiz_projeto, "dados", ...)
 }
 
 # Criando uma função para compor caminhos na pasta de resultados
@@ -166,6 +166,23 @@ minimo_registros_amostra <- 2000
 # do usuário, 2026-10-10; contados no bloco usado, como o de trabalhadores)
 minimo_registros_od <- 100
 piso_registros_od   <- 30
+
+# Definindo o mínimo de registros de falecidos na amostra do Censo abaixo do
+# qual o distrito recebe aviso, e o piso abaixo do qual fica sem valor nos
+# indicadores de óbitos da amostra (decisão do usuário, 2026-10-13)
+minimo_registros_obitos <- 50
+piso_registros_obitos   <- 20
+
+# Definindo o mínimo de registros de domicílios unipessoais na amostra do Censo
+# abaixo do qual o distrito recebe aviso, e o piso abaixo do qual fica sem valor
+# nos indicadores de perfil de quem mora só (decisão do usuário, 2026-10-13)
+minimo_registros_unipessoais <- 200
+piso_registros_unipessoais   <- 100
+
+# Definindo o mínimo de registros de domicílios unipessoais em um grupo de um
+# recorte (por exemplo, 80 anos ou mais) abaixo do qual a figura marca o valor
+# com † (estimativa instável); o valor não é suprimido
+minimo_registros_grupo_unipessoais <- 30
 
 
 ################################################################################
