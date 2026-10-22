@@ -28,15 +28,15 @@ source(file.path("scripts", "_config", "paths.R"), encoding = "UTF-8")
 codigo_municipio_sp <- "3550308"
 
 # Definindo o caminho e o SHA-256 do universo por setor
-arquivo_setores <- "censo_2022/setores_censitarios/tratados/tabulares/censo_universo_setores.parquet"
+arquivo_setores <- "censo_2022/setores_censitarios/tratados/sp/tabulares/censo_universo_setores.parquet"
 sha256_setores  <- "d5839bb3e9ea6f8829e2822b8b8fb18d1a62493b24389856195d8629efc7e0e9"
 
 # Definindo o caminho e o SHA-256 da tabela municipal do universo
-arquivo_municipios <- "censo_2022/municipios/tabulares/censo_universo_municipios.parquet"
+arquivo_municipios <- "censo_2022/municipios/tratados/sp/tabulares/censo_universo_municipios.parquet"
 sha256_municipios  <- "820914a3bd6d1f43053e5bace602ebba6673a0a3d5f3dd580b5df2ff92e12c9e"
 
 # Definindo o caminho e o SHA-256 das ausências do universo por setor
-arquivo_ausencias <- "censo_2022/setores_censitarios/tratados/tabulares/censo_setores_ausencias.parquet"
+arquivo_ausencias <- "censo_2022/setores_censitarios/tratados/sp/tabulares/censo_setores_ausencias.parquet"
 sha256_ausencias  <- "ce2cbb6e9a5b294bc737997b35bc5c6cc031ad03539e37d5d2a188fd67d43193"
 
 # Definindo os campos do universo usados no grupo (significados no dicionário

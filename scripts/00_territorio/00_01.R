@@ -35,23 +35,23 @@ codigo_municipio_sp <- "3550308"
 codigo_municipio_sp_od <- 36L
 
 # Definindo o caminho e o SHA-256 do universo por setor
-arquivo_setores <- "censo_2022/setores_censitarios/tratados/tabulares/censo_universo_setores.parquet"
+arquivo_setores <- "censo_2022/setores_censitarios/tratados/sp/tabulares/censo_universo_setores.parquet"
 sha256_setores  <- "d5839bb3e9ea6f8829e2822b8b8fb18d1a62493b24389856195d8629efc7e0e9"
 
 # Definindo o caminho e o SHA-256 da geometria dos distritos do Censo
-arquivo_distritos_geometria <- "censo_2022/distritos/geometrias/censo_distritos_geometria.parquet"
+arquivo_distritos_geometria <- "censo_2022/distritos/tratados/sp/geometrias/censo_distritos_geometria.parquet"
 sha256_distritos_geometria  <- "9292af22b4aa87063e95cba5afa71e4a2abe14a757a5697f2f24a83bca61df82"
 
 # Definindo o caminho e o SHA-256 da relação entre APs e distritos
-arquivo_ap_distritos <- "censo_2022/areas_de_ponderacao/tratados/tabulares/censo_ap_distritos.parquet"
+arquivo_ap_distritos <- "censo_2022/areas_de_ponderacao/tratados/sp/tabulares/censo_ap_distritos.parquet"
 sha256_ap_distritos  <- "64b5ff2c9bd05f11193c8dec2407191a7b3c142dca83afeef9f996418e43afc4"
 
 # Definindo o caminho e o SHA-256 da geometria das APs
-arquivo_ap_geometria <- "censo_2022/areas_de_ponderacao/tratados/geometrias/censo_ap_controlada_geometria.parquet"
+arquivo_ap_geometria <- "censo_2022/areas_de_ponderacao/tratados/sp/geometrias/censo_ap_controlada_geometria.parquet"
 sha256_ap_geometria  <- "764e237ab68b3c1365a7090e73a17e62ad0c1242d422c3b292c361526339f202"
 
 # Definindo o caminho e o SHA-256 da tabela municipal do universo
-arquivo_municipios <- "censo_2022/municipios/tabulares/censo_universo_municipios.parquet"
+arquivo_municipios <- "censo_2022/municipios/tratados/sp/tabulares/censo_universo_municipios.parquet"
 sha256_municipios  <- "820914a3bd6d1f43053e5bace602ebba6673a0a3d5f3dd580b5df2ff92e12c9e"
 
 # Definindo o caminho e o SHA-256 dos atributos das zonas da OD

@@ -28,7 +28,7 @@ source(file.path("scripts", "_config", "paths.R"), encoding = "UTF-8")
 codigo_municipio_sp <- "3550308"
 
 # Definindo o caminho e o SHA-256 da amostra por área de ponderação
-arquivo_amostra <- "censo_2022/areas_de_ponderacao/tratados/tabulares/censo_amostra_areas_ponderacao.parquet"
+arquivo_amostra <- "censo_2022/areas_de_ponderacao/tratados/sp/tabulares/censo_amostra_areas_ponderacao.parquet"
 sha256_amostra  <- "7bec0b2f873264908f1304fb3c6e2ee6e015b4df9231cc0f6eec419b7137bc6b"
 
 # Definindo os campos da amostra usados no grupo (significados no dicionário

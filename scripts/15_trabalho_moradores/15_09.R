@@ -31,11 +31,11 @@ source(file.path("scripts", "_config", "universos_amostra.R"), encoding = "UTF-8
 codigo_municipio_sp <- "3550308"
 
 # Definindo o caminho e o SHA-256 da amostra por área de ponderação
-arquivo_amostra <- "censo_2022/areas_de_ponderacao/tratados/tabulares/censo_amostra_areas_ponderacao.parquet"
+arquivo_amostra <- "censo_2022/areas_de_ponderacao/tratados/sp/tabulares/censo_amostra_areas_ponderacao.parquet"
 sha256_amostra  <- "7bec0b2f873264908f1304fb3c6e2ee6e015b4df9231cc0f6eec419b7137bc6b"
 
 # Definindo o caminho e o SHA-256 da tabela de rótulos das variáveis codificadas
-arquivo_rotulos <- "censo_2022/areas_de_ponderacao/tratados/tabulares/censo_amostra_rotulos.parquet"
+arquivo_rotulos <- "censo_2022/areas_de_ponderacao/tratados/sp/tabulares/censo_amostra_rotulos.parquet"
 sha256_rotulos  <- "e5482945a242ba3b74623090d1ef4724a6f6de9106cf8e68878a2c5f9ce21caa"
 
 # Definindo as variáveis da amostra usadas no grupo
