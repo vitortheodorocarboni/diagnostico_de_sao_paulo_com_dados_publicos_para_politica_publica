@@ -1,6 +1,7 @@
-# Dados e saidas geradas ficam fora do Git
-dados/
-resultados/
+# Documentos internos ficam só na máquina (o GitHub tem o README.md público)
+/AGENTS.md
+/PLANO_DE_TRABALHO.md
+/README_INTERNO.md
 
 # Estado local do R e dos editores
 .Rhistory
